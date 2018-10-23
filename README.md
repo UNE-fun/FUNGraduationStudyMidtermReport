@@ -1,0 +1,3 @@
+# FUNGraduationStudyMidtermReport
+Manabaで公開された中間報告書のTeXサンプルが古すぎてincludegraphicsとか使えなかった…。
+そこでもろもろ使えるようにfuninfosys.styとかを編集しようっていうのがこれ。
