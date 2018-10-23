@@ -1,3 +1,21 @@
-# FUNGraduationStudyMidtermReport
-Manabaで公開された中間報告書のTeXサンプルが古すぎてincludegraphicsとか使えなかった…。
-そこでもろもろ使えるようにfuninfosys.styとかを編集しようっていうのがこれ。
+# FUNGraduationStudyMidtermReportとは
+Manabaで公開された中間報告書のTeXサンプルが（）だったから何とかしようとしているヤツ。
+usepackage使えないとか何者！？
+もろもろ使えるようにfuninfosys.styとかを編集しようっていう感じ。
+
+## ex.tex
+なんか元のsampletex.texには画像も票も数式も入っていないのに指定だけはされているから、その辺も何とかしておこうとして作ったもの。
+元のからコピペしてきてリネームしてちょこちょこ改変しているtexのmasterファイル。inputとかも使えるか確認しておきたい。
+
+## FIXfuninfosys.sty
+一生懸命修正しているTeXサンプルに入っていたスタイルシート
+footheightだったかの今では廃止されてしまったコマンドとか混じってたからその辺消したやつ
+
+## funinfosys.sty
+全ての元凶。
+最初画像入れれなくてビックリした。
+
+## 51.png
+私のローカルディレクトリにあったそれっぽいグラフの画像。無断で使わないでね！！！（たしかプロジェクトのときのヤツだから）
+
+
