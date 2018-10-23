@@ -1,14 +1,9 @@
-%
-% 公立はこだて未来大学卒業研究中間報告書[全コース対応版]
-%
-%         ファイル名："sample.tex"
-%
 \documentclass[11pt]{jarticle}
 
 \usepackage{FIXfuninfosys}
-\usepackage{fancyhdr}
 \usepackage{url}
 \usepackage{float}
+\usepackage[labelsep=space]{caption}
 \usepackage[dvipdfmx]{graphicx,color}
 
 \author{% 
@@ -22,9 +17,10 @@ b10xxxxx 未来太郎\\指導教員 : 函館一郎
 \title{中間報告書の書き方}
 \etitle{How to Write Manuscripts for Midterm Report}
 \eauthor{Taro MIRAI}
-\abstract{和文は300から400文字で記述すること．}
+
+\abstract{和文は300から400文字で記述すること．和文は300から400文字で記述すること．和文は300から400文字で記述すること．和文は300から400文字で記述すること．和文は300から400文字で記述すること．和文は300から400文字で記述すること．和文は300から400文字で記述すること．和文は300から400文字で記述すること．和文は300から400文字で記述すること．和文は300から400文字で記述すること．和文は300から400文字で記述すること．和文は300から400文字で記述すること．}
 \keywords{北海道, 函館, 亀田中野, 公立はこだて未来大学}
-\eabstract{English should be written in 100 to 150 words.}
+\eabstract{English should be written in 100 to 150 words.English should be written in 100 to 150 words.English should be written in 100 to 150 words.English should be written in 100 to 150 words.English should be written in 100 to 150 words.English should be written in 100 to 150 words.English should be written in 100 to 150 words.English should be written in 100 to 150 words.English should be written in 100 to 150 words.English should be written in 100 to 150 words.English should be written in 100 to 150 words.}
 \ekeywords{Hokkaido, Hakodate, Kamedanakano, FUN}
 
 \begin{document}
@@ -53,19 +49,31 @@ b10xxxxx 未来太郎\\指導教員 : 函館一郎
 
 \subsection{図・写真}
 
-読者の理解を助けるため，図や表を効果的に利用すること．図のキャプションは
+読者の理解を助けるため，図や表を効果的に利用すること．図\ref{fig1}のキャプションは下記のようにする．
 
-\begin{figure}[H]
+\begin{figure}[H]%Hで半ば強制的にそこに配置することができる。t(top)やb(bottom)の指定もある
   \includegraphics[scale=0.5]{hoge.png}
   \caption{画像のテスト}
-  \label{fig1}
+  \label{fig1}%labelを付けておくと、本文中で引っ張れて便利
 \end{figure}
 
-のように，図の下に記す．表のキャプションは
+このように，図の下に記すこと．表\ref{tab1}のキャプションは下記のようにする．
 
-\begin{center}表1　○○○○\end{center}
+\begin{table}[H]
+  \caption{表のテスト}
+  \begin{center}
+  \begin{tabular}{ r  c  p{8zw} } %縦罫線は引かないらしい。r(右寄せ), c(中央寄せ), l(左寄せ)で指定できる
+    \hline
+    項目1 & 項目2 & 項目3 \\
+    \hline
+    a & b & c \\
+    \hline
+  \end{tabular}%tabularは閉じること
+  \end{center}
+  \label{tab1}
+\end{table}
 
-のように，表の上に記す．
+このように，表の上に記す．
 
 \section{実験と評価}
 
