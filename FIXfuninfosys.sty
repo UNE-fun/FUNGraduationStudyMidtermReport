@@ -1,0 +1,193 @@
+﻿%
+% 公立はこだて未来大学卒業研究中間報告書[情報システム/高度ICTコース]スタイルファイル
+%
+%          ファイル名："funinfosys.sty"
+%
+% 印刷位置の水平方向微調整パラメータ
+\newlength{\suiheioffset}
+\setlength{\suiheioffset}{0mm} 
+% 表題左部分の空白調整パラメータ
+\newlength{\hyodaioffset}
+\setlength{\hyodaioffset}{10mm} 
+\typeout{*** FUN Graduation Study Midterm Report Style ***}
+ \topmargin -1.04cm \headheight 5mm \headsep 8mm  \footskip
+30pt 
+%
+\textheight 9.8in \textwidth 6.55in \columnsep .38in \columnseprule 0pt 
+\oddsidemargin 0mm \evensidemargin 0mm
+
+\def\course#1{\gdef\@course{#1}}
+\addtolength{\oddsidemargin}{\suiheioffset}
+\addtolength{\evensidemargin}{\suiheioffset}
+% ヘッダあり，フッタなし
+\def\@oddhead{\begin{minipage}{\textwidth}{{\shortstack[l]{FUN Graduation Study\\ Midterm  Report}}\hfill{\small \@course}\vspace{-4mm}\par\mbox{}\hrulefill\mbox{}}\end{minipage}}
+\def\@evenhead{\@oddhead}
+\def\@oddfoot{}\def\@evenfoot{}
+
+%\shortstack[l]{FUN Granted Research\\ Project Report\\
+
+% 表題形式指定
+\def\maketitle{\par
+ \begingroup
+ \def\thefootnote{\fnsymbol{footnote}}
+ \def\@makefnmark{\hbox 
+ to 0pt{$^{\@thefnmark}$\hss}} 
+ \twocolumn[\@maketitle] 
+ \@thanks
+ \endgroup
+ \let\maketitle\relax
+ \let\@maketitle\relax
+ \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\thanks\relax}
+% 表題の配置 
+% 本文の始まる位置を下げたい場合には，この1.4という値を大きくすればよい。
+%\def\@maketitle{\vbox to 3.7in{\hsize\textwidth
+\def\@maketitle{\vbox to 4.5in{\hsize\textwidth
+\linewidth\hsize
+ \centering
+ {\Large \bf\@title \par}
+% {\LARGE \hspace*{\hyodaioffset}\@title \par}
+ \medskip
+ {\large \begin{tabular}[t]{c}\@author\end{tabular}\par} 
+ \vskip 4mm {\normalsize\bf \@etitle \par}
+ \vskip 2mm {\normalsize \@eauthor \par}
+ \def\baselinestretch{0.8}%add
+ \vskip 7mm {\begin{minipage}{0.9\textwidth}%
+ \parindent2em\noindent\baselineskip 12pt% アブストラクトの行間を狭める
+ {\bf 概要 : }\@abstract \\[3.5mm]%add
+ \@keywords\par\end{minipage} \par}
+ \vskip 5mm {\begin{minipage}{0.9\textwidth}%
+ \parindent2em\noindent\baselineskip 12pt% アブストラクトの行間を狭める
+ {\bf Abstract:~}\@eabstract \\[3.5mm]%add
+ \@ekeywords\par\end{minipage} \par}
+
+ \vfil \vfil}
+}
+\def\copyrightspace{\footnotetext[1]{\mbox{}\vrule height .80in width 0pt}}
+% 図表の量の指定
+\setcounter{topnumber}{10}
+\def\topfraction{.99}
+\setcounter{bottomnumber}{10}
+\def\bottomfraction{.99}
+\setcounter{totalnumber}{20}
+\def\textfraction{.0}
+\setcounter{dbltopnumber}{4}
+\def\dbltopfraction{.99}
+\floatsep 12pt plus 12pt minus 12pt
+\textfloatsep 20pt plus 12pt minus 12pt
+\intextsep 12pt plus 12pt minus 12pt
+\def\fnum@figure{Fig. \thefigure} 
+\def\fnum@table{Table \thetable}   
+\long\def\@makecaption#1#2{
+ \vskip 10pt 
+ \setbox\@tempboxa\hbox{#1\ \ #2}
+ \ifdim \wd\@tempboxa >\hsize \unhbox\@tempboxa\par \else \hbox
+to\hsize{\hfil\box\@tempboxa\hfil} 
+ \fi}
+
+\def\etitle#1{\gdef\@etitle{#1}}
+\def\eauthor#1{\gdef\@eauthor{#1}}
+\def\abstract#1{\gdef\@abstract{#1}}
+\def\eabstract#1{\gdef\@eabstract{#1}}
+\def\keywords#1{\gdef\@keywords{{\bf キーワード :~}#1}}
+\def\keyword#1{\gdef\@keywords{{\bf キーワード :~}#1}}
+\def\ekeywords#1{\gdef\@ekeywords{{\bf Keywords:~}#1}}
+\def\ekeyword#1{\gdef\@ekeywords{{\bf Keyword:~}#1}}
+
+\def\thefootnote{\mbox{\dag}\arabic{footnote}}
+%
+\def\thanks#1{\footnotemark\begingroup
+     \def\protect{\noexpand\protect\noexpand}
+     \xdef\@thanks{\@thanks\protect\footnotetext[\the\c@footnote]{#1}}
+     \endgroup}
+\def\@fnsymbol#1{\ifcase#1\or *\or **\or ***\or
+   \dagger\or \dagger\dagger\or \dagger\dagger\dagger\or
+   \ddagger\or \ddagger\ddagger\or \ddagger\ddagger\ddagger
+   \else\@ctrerr\fi\relax}
+\def\and{%%                             %\begin{tabular}
+\end{tabular}・\begin{tabular}[t]{c}%% \end{tabular}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\long\def\@footnotetext#1{\insert\footins{\small
+    \interlinepenalty\interfootnotelinepenalty
+    \splittopskip\footnotesep
+    \splitmaxdepth \dp\strutbox \floatingpenalty \@MM
+    \hsize\columnwidth \@parboxrestore%
+    \edef\@currentlabel{\csname p@footnote\endcsname\@thefnmark}\@makefntext
+    {\rule{\z@}{\footnotesep}\ignorespaces#1\strut}}}
+
+\long\def\@makefntext#1{\noindent$\@thefnmark$\hskip 10pt #1}
+
+\def\@makefnmark{\smash{\hbox{$^{\@thefnmark}$}}} % smashed to make it
+                                                  % zero height
+
+\def\thefootnote{\mbox{\dag}\arabic{footnote}}
+
+\def\specialfootnotetext{\@ifnextchar
+    [{\@specialxfootnotenext}{\xdef\@thefnmark{\thempfn}\@specialfootnotetext}}
+
+\def\@specialxfootnotenext[#1]{\begingroup \csname c@\@mpfn\endcsname #1\relax
+   \xdef\@thefnmark{\thempfn}\endgroup \@specialfootnotetext}
+
+\def\@mpfn{footnote}
+\def\thempfn{\thefootnote}
+
+\long\def\@specialfootnotetext#1{\insert\footins{\footnotesize
+    \interlinepenalty\interfootnotelinepenalty
+    \splittopskip\footnotesep
+    \splitmaxdepth \dp\strutbox \floatingpenalty \@MM
+    \hsize\columnwidth \@parboxrestore\leftskip10\Q
+    \hangindent=10\Q \hangafter=1
+   \edef\@currentlabel{\csname p@footnote\endcsname\@thefnmark}\@specialmakefntext
+    {\rule{\z@}{\footnotesep}\ignorespaces#1\strut}}}
+
+\long\def\@specialmakefntext#1{\noindent\llap{$\@thefnmark$ }#1}
+%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 章の見出し
+% 第4,5引き数はそれぞれ見出しの上下の空白の量である．
+% \@startsectionの第4引き数を負にすると見出しの後インデントしない．
+% 　　　〃　　　　第5引き数を負にすると見出しの後改行しない．
+% 　　　〃　　　　第6引き数は見出しフォントの指定
+\def\section{\@startsection {section}{1}{\z@}{1.25ex plus 1ex minus 
+ .2ex}{1.0ex plus .2ex}{\large\bf}}
+\def\subsection{\@startsection{subsection}{2}{\z@}{1.25ex plus 1ex minus 
+ .2ex}{1.0ex plus .2ex}{\large\bf}}
+\def\subsubsection{\@startsection{subsubsection}{3}{\z@}{1.25ex plus 
+ 1ex minus .2ex}{1.0ex plus .2ex}{\normalsize\bf}}
+\def\paragraph{\@startsection
+ {paragraph}{4}{\z@}{1.25ex plus 1ex minus .2ex}{-1em}{\normalsize\bf}}
+\def\subparagraph{\@startsection
+ {subparagraph}{4}{\parindent}{1.25ex plus 1ex minus 
+ .2ex}{-1em}{\normalsize\bf}}
+% リスト環境のパラメータ
+\leftmargini 18pt
+\leftmarginii 16pt \leftmarginiii 13pt \leftmarginiv 10pt \leftmarginv 10pt
+\leftmarginvi 10pt
+\leftmargin\leftmargini
+\labelsep 5pt
+\labelwidth\leftmargini\advance\labelwidth-\labelsep
+\def\@listI{\leftmargin=\leftmargini
+ \topsep=0pt \parsep=0pt \itemsep=0pt \parsep=0pt \itemindent 0pt \relax}
+\def\@listii{\leftmargin=\leftmarginii
+ \labelwidth=\leftmarginii
+ \advance\labelwidth by -\labelsep
+ \topsep=0pt \parsep=0pt \itemsep=0pt \parsep=0pt \itemindent 0pt \relax}
+\let\@listi\@listI \@listi 
+% 参考文献
+\def\thebibliography#1{\section*{参考文献}
+  \global\def\@listi{\leftmargin\leftmargini
+               \labelwidth\leftmargini \advance\labelwidth-\labelsep
+               \topsep 1pt plus 2pt minus 1pt
+               \parsep 0.25ex plus 1pt \itemsep 0.25ex plus 1pt}
+  \list {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
+    \advance\leftmargin\labelsep\usecounter{enumi}}
+    \def\newblock{\hskip .11em plus .33em minus -.07em}
+    \sloppy
+    \sfcode`\.=1000\relax}
+%
+%
+% EOF  
+
+
+
+
