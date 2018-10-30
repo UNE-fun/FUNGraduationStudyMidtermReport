@@ -10,9 +10,7 @@
 \newlength{\hyodaioffset}
 \setlength{\hyodaioffset}{10mm} 
 \typeout{*** FUN Graduation Study Midterm Report Style ***}
- \topmargin -1.04cm \headheight 5mm \headsep 8mm  \footskip
-30pt 
-%
+\topmargin -1.04cm \headheight 5mm \headsep 8mm  \footskip 30pt 
 \textheight 9.8in \textwidth 6.55in \columnsep .38in \columnseprule 0pt 
 \oddsidemargin 0mm \evensidemargin 0mm
 
@@ -182,7 +180,8 @@ to\hsize{\hfil\box\@tempboxa\hfil}
   \list {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
     \advance\leftmargin\labelsep\usecounter{enumi}}
     \def\newblock{\hskip .11em plus .33em minus -.07em}
-    \sloppy
+    \sloppy %改行の基準を緩めて、行末が長く右マージンにはみ出るのを防ぐ
+    %\fussy  %うまくいかなかった場合にはこっちを使ってみて
     \sfcode`\.=1000\relax}
 %
 %
