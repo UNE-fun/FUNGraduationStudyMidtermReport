@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.1-180518-2.6 (utf8.sjis) (TeX Live 2018/W32TeX) (preloaded format=platex 2018.7.29)  30 OCT 2018 13:50
+This is e-pTeX, Version 3.14159265-p3.8.1-180518-2.6 (utf8.sjis) (TeX Live 2018/W32TeX) (preloaded format=platex 2018.7.29)  30 OCT 2018 14:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -135,29 +135,48 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 34.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 34.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 36.
+ (./3-1.tex)
+File: hoge.png Graphic file (type bmp)
+<hoge.png>
 
-(c:/w32tex/share/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+Overfull \hbox (17.94711pt too wide) in paragraph at lines 59--60
+[][] 
+ []
+
+
+Overfull \vbox (0.73932pt too high) has occurred while \output is active []
+
+
+[1
+
+
+] (./ex.bbl
+
+LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
+(Font)              using `JT1/gt/m/n' instead on input line 6.
+
+
+LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
+(Font)              using `JY1/gt/m/n' instead on input line 6.
+
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 36.
+Overfull \vbox (0.73932pt too high) has occurred while \output is active []
 
-! TeX capacity exceeded, sorry [input stack size=5000].
-\font@name ->
-             \OT1/cmr/m/n/10 
-l.36 ...内で使うスタイルシートがあったりするそう}
-                                                 が，仕上がりイメージはできる限
-If you really absolutely need more capacity,
-you can ask a wizard to enlarge me.
 
- 
+[2
+
+] (./ex.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
 Here is how much of TeX's memory you used:
- 1931 strings out of 493249
- 30023 string characters out of 6146370
- 445476 words of memory out of 5000000
- 5926 multiletter control sequences out of 15000+600000
- 14783 words of font info for 57 fonts, out of 8000000 for 9000
+ 1952 strings out of 493249
+ 30076 string characters out of 6146370
+ 109297 words of memory out of 5000000
+ 5937 multiletter control sequences out of 15000+600000
+ 15129 words of font info for 58 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 5000i,8n,9988p,527b,229s stack positions out of 5000i,500n,10000p,500000b,80000s
-No pages of output.
+ 36i,10n,39p,527b,308s stack positions out of 5000i,500n,10000p,500000b,80000s
+
+Output written on ex.dvi (2 pages, 7972 bytes).
