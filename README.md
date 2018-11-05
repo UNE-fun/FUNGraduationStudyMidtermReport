@@ -1,4 +1,4 @@
-#不具合あります。検討しなおすならイマ！！！
+# 不具合あります。検討しなおすならイマ！！！
 https://github.com/fun-dev/mid-report-infosys-template
 こっちを使うことを再考してください
 
