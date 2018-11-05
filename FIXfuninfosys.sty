@@ -3,20 +3,18 @@
 %
 %          ファイル名："funinfosys.sty"
 %
-% 印刷位置の水平方向微調整パラメータ
-\newlength{\suiheioffset}
-\setlength{\suiheioffset}{0mm} 
+
 % 表題左部分の空白調整パラメータ
 \newlength{\hyodaioffset}
 \setlength{\hyodaioffset}{10mm} 
 \typeout{*** FUN Graduation Study Midterm Report Style ***}
-\topmargin -1.04cm \headheight 5mm \headsep 8mm  \footskip 30pt 
-\textheight 9.8in \textwidth 6.55in \columnsep .38in \columnseprule 0pt 
-\oddsidemargin 0mm \evensidemargin 0mm
+
+\columnsep .38in 
+\columnseprule 0pt 
+
 
 \def\course#1{\gdef\@course{#1}}
-\addtolength{\oddsidemargin}{\suiheioffset}
-\addtolength{\evensidemargin}{\suiheioffset}
+
 % ヘッダあり，フッタなし
 \def\@oddhead{\begin{minipage}{\textwidth}{{\shortstack[l]{FUN Graduation Study\\ Midterm  Report}}\hfill{\small \@course}\vspace{-4mm}\par\mbox{}\hrulefill\mbox{}}\end{minipage}}
 \def\@evenhead{\@oddhead}
@@ -39,7 +37,7 @@
 % 表題の配置 
 % 本文の始まる位置を下げたい場合には，この1.4という値を大きくすればよい。
 %\def\@maketitle{\vbox to 3.7in{\hsize\textwidth
-\def\@maketitle{\vbox to 4.5in{\hsize\textwidth
+\def\@maketitle{\vbox to 6.5in{\hsize\textwidth
 \linewidth\hsize
  \centering
  {\Large \bf\@title \par}
@@ -180,8 +178,8 @@ to\hsize{\hfil\box\@tempboxa\hfil}
   \list {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
     \advance\leftmargin\labelsep\usecounter{enumi}}
     \def\newblock{\hskip .11em plus .33em minus -.07em}
-    \sloppy %改行の基準を緩めて、行末が長く右マージンにはみ出るのを防ぐ
-    %\fussy  %うまくいかなかった場合にはこっちを使ってみて
+    %\sloppy %改行の基準を緩めて、行末が長く右マージンにはみ出るのを防ぐ
+    \fussy  %うまくいかなかった場合にはこっちを使ってみて
     \sfcode`\.=1000\relax}
 %
 %
