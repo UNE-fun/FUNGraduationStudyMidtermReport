@@ -1,6 +1,6 @@
-# 不具合あります。検討しなおすならイマ！！！
+# これは不安定版です
 https://github.com/fun-dev/mid-report-infosys-template
-こっちを使うことを再考してください
+こっちを使うことも検討してみてください
 
 # FUNGraduationStudyMidtermReportとは
 本学で課されている卒研で提出する中間報告書のこと。
